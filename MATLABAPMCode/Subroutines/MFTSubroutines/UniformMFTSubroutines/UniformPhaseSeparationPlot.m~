@@ -1,0 +1,185 @@
+
+function [is_stable, free_en_diff] = UniformPhaseSeparationPlot(dens_info, cond_evap_ratios, plot_title_path)
+
+close all;
+figure(1)
+
+%title(sprintf('Cond Rate/Evap Rate vs density for (evap, cond) = (%.3f, %.3f) ', evap_coeff, cond_coeff));
+%Given the the list of cond_evap_ratios(to be thought of a chemical potential) vs. densities, predicts whether there will be a
+%phase separation. 
+
+curve_line_width = 2;
+phase_sep_line_width = 2;
+ax_font_size = 16;
+phase_sep_curve_col = 'k';
+
+
+
+if(sum(gradient(log(cond_evap_ratios))>0) == 0)
+    semilogy(dens_info.values, cond_evap_ratios, 'LineWidth', curve_line_width, 'Color', 'k');
+    set(gca, 'XLim', dens_info.pad);
+    set(gca, 'YLim', [min(cond_evap_ratios) max(cond_evap_ratios)]);
+    free_en_diff = 0;
+else
+    
+    padded_density_list = [dens_info.pad(1) dens_info.values dens_info.pad(2)];
+    padded_ratio_list = [(max(cond_evap_ratios(:)) * exp(50)) cond_evap_ratios  min(cond_evap_ratios(:)) * 1/exp(50)];
+    %Pad the list, as often we end up with an extremely sparse gas phase
+    
+    
+    log_padded_ratio_list = log(padded_ratio_list);    
+    density_diff_list = diff(padded_density_list);
+    ratio_diff_list = diff(log_padded_ratio_list);
+    
+    
+    accum_array = zeros(size(log_padded_ratio_list));
+    for i = 1:(length(accum_array) -1)
+        accum_array(i+1) = accum_array(i) + density_diff_list(i)* .5 * (log_padded_ratio_list(i) + log_padded_ratio_list(i+1));
+    end
+    %accum_array is a sort of free energy array. 
+    
+    
+    [first_ind_mesh sec_ind_mesh] = meshgrid(1:length(density_diff_list), 1:length(density_diff_list));
+    
+    
+    
+    ok_total = first_ind_mesh < sec_ind_mesh;    
+    ok_first_indices = first_ind_mesh(ok_total);
+    ok_sec_indices = sec_ind_mesh(ok_total);
+    
+    
+    best_choice.free_en_diff = 0;
+    ok_index_pairs = [ok_first_indices ok_sec_indices];
+    
+    
+    
+    %Iterates over pairs of indices to find the pair with equal chemical potential and the largest free energy of separation. Zeros in on the exact point by
+    %solving a quadratic equation
+    
+    
+    for i = 1:length(ok_first_indices)
+        cur_first_ind = ok_first_indices(i);
+        cur_sec_ind = ok_sec_indices(i);
+        
+        
+        lograt1 = log_padded_ratio_list(cur_first_ind);
+        lograt1prime = ratio_diff_list(cur_first_ind);
+        accum1 = accum_array(cur_first_ind);
+        dens1 = padded_density_list(cur_first_ind);
+        dens1prime = density_diff_list(cur_first_ind);
+        
+        lograt2 = log_padded_ratio_list(cur_sec_ind);
+        lograt2prime = ratio_diff_list(cur_sec_ind);
+        dens2 = padded_density_list(cur_sec_ind);
+        dens2prime = density_diff_list(cur_sec_ind);
+        accum2 = accum_array(cur_sec_ind);
+        
+
+        %Solves the quadratic equation to see exactly which densities should be phase separated using the values and slopes of
+        %chemical potential. 
+        one_pol = [0 0 1];        
+        c1_pol = [0 1 0];
+        c1_squared_pol = conv(c1_pol, c1_pol);
+        c1_squared_pol = c1_squared_pol(3:5);
+        
+        
+        
+        base_c2 = (lograt1 - lograt2)/lograt2prime;
+        dc2dc1 = lograt1prime/lograt2prime;
+        
+        c2_pol = [0 dc2dc1 base_c2];
+        c2_squared_pol = conv(c2_pol, c2_pol);
+        c2_squared_pol = c2_squared_pol(3:5);
+        
+                
+        tot_accum_1  = accum1 * one_pol + (c1_pol * lograt1 * dens1prime) +1 *  c1_squared_pol * lograt1prime * dens1prime/2;
+        tot_accum_2 = accum2 * one_pol + (c2_pol * lograt2 * dens2prime)  +1 *  c2_squared_pol * lograt2prime * dens2prime/2;
+        
+        dens_diff_pol = one_pol*(dens2 - dens1) + c2_pol*dens2prime - c1_pol * dens1prime;
+        log_rat_pol = one_pol * lograt1 + c1_pol * lograt1prime;
+        line_subtracting_area = conv(dens_diff_pol, log_rat_pol);
+        line_subtracting_area = line_subtracting_area(3:5);
+        
+        
+        
+        pol_roots = roots(tot_accum_2 - tot_accum_1- line_subtracting_area);
+        pol_roots = pol_roots(abs(pol_roots - .5) <= .5);
+        pol_roots = pol_roots(abs(polyval(c2_pol, pol_roots) - .5) <= .5);
+        pol_roots = pol_roots(~isnan(pol_roots));
+        pol_roots = pol_roots(imag(pol_roots) ==0);
+        
+        if(length(pol_roots)>0)
+            pol_roots = pol_roots(1);
+            
+            
+            %            fprintf('Inds chosen are %d, %d, Root chosen is %f \n', cur_first_ind, cur_sec_ind, pol_roots);
+            chosen_c1 = pol_roots;
+            chosen_c2 = polyval(c2_pol, chosen_c1);
+            %            fprintf('Area under line is %f \n', polyval(line_subtracting_area, chosen_c1));
+            
+            
+            %Chooses a 
+            first_left_dens = padded_density_list(cur_first_ind);
+            sec_left_dens = padded_density_list(cur_sec_ind);
+            first_chosen_dens = first_left_dens +  chosen_c1 * dens1prime;
+            sec_chosen_dens = sec_left_dens +  chosen_c2 * dens2prime;
+            
+            current_choice.first_ind = cur_first_ind;
+            current_choice.sec_ind = cur_sec_ind;
+            current_choice.first_dens = first_chosen_dens;
+            current_choice.second_dens = sec_chosen_dens;
+            current_choice.lograt = lograt1 + lograt1prime * chosen_c1;
+            current_choice.c1 = chosen_c1;
+            current_choice.c2 = chosen_c2;
+            current_choice.first_left_dens = first_left_dens;
+            current_choice.sec_left_dens = sec_left_dens;
+            
+            %  fprintf('Legal Roots! Dist is %f \n', dist);
+            
+            orig_free_energy = accum_array(dens_info.base_index) - padded_density_list(dens_info.base_index) * current_choice.lograt;
+            new_free_energy1 = accum_array(current_choice.first_ind) + density_diff_list(current_choice.first_ind)* current_choice.c1 *...
+                sum([(1 - .5 * current_choice.c1) .5 *current_choice.c1] .*(log_padded_ratio_list(current_choice.first_ind + [0 1]))) - current_choice.first_dens * current_choice.lograt;
+            new_free_energy2 = accum_array(current_choice.sec_ind) + density_diff_list(current_choice.sec_ind)* current_choice.c2 *...
+                sum([(1 - .5 * current_choice.c2) .5 * current_choice.c2] .*(log_padded_ratio_list(current_choice.sec_ind + [0 1]))) - current_choice.second_dens * current_choice.lograt;
+            
+            current_choice.free_en_discrep = new_free_energy1 - new_free_energy2;            
+            current_choice.free_en_diff = mean([new_free_energy1, new_free_energy2]) - orig_free_energy;
+            
+            if(current_choice.free_en_diff > best_choice.free_en_diff && first_chosen_dens < dens_info.base && sec_chosen_dens > dens_info.base)
+                best_choice = current_choice;
+            end
+        end
+        
+    end
+    
+    %Plots the chemical potential as a function of density, as well as the predicted phase separation if applicable. 
+    semilogy(dens_info.values, cond_evap_ratios, 'LineWidth', curve_line_width, 'Color', 'k');
+    % title(sprintf('From NewPhaseSepPlot, oktotal is %d', sum(ok_total(:))), 'FontSize', 24);
+    hold on;
+    
+    if(best_choice.free_en_diff > 0)
+        semilogy([best_choice.first_dens best_choice.second_dens], exp(best_choice.lograt) * [1 1], 'o', 'Color', 'r', 'MarkerSize', 10, 'MarkerFaceColor', 'r', 'Color', 'r', 'LineWidth', curve_line_width, 'LineStyle', '-');
+        
+        set(gca, 'XLim', [min(dens_info.values) max(dens_info.values)]);
+        set(gca, 'YLim', [min(cond_evap_ratios) max(cond_evap_ratios)]);
+    else
+        best_choice.free_en_diff = 0;
+    end
+    free_en_diff = best_choice.free_en_diff;
+
+end
+
+set(gca, 'FontSize', ax_font_size)
+set(gca, 'XLim', dens_info.pad);
+
+%set(gca, 'FontWeight', 'bold')
+
+is_stable = free_en_diff<=0;
+
+
+if(length(plot_title_path)> 0)
+    MakeFilePath(plot_title_path);
+    saveas(1, sprintf('%s.fig', plot_title_path));
+    saveas(1, sprintf('%s.eps', plot_title_path));
+    saveas(1, sprintf('%s.png', plot_title_path));
+end

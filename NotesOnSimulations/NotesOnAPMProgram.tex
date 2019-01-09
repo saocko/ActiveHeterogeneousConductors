@@ -1,0 +1,345 @@
+%\documentclass[final,3p,times]{elsarticle}
+%\documentclass[pra,twocolumn]{revtex4-1}
+
+%\documentclass[preprint, aps, superscriptaddress,preprintnumbers,showpacs]{revtex4-1}
+\documentclass[rspublic, aps, superscriptaddress,preprintnumbers, showpacs, notitlepage]{revtex4-1}
+%\documentclass[rspublic, superscriptaddress, showpacs, notitlepage, twocolumn]{revtex4-1}
+
+%\documentclass[reprint, aps, superscriptaddress,preprintnumbers,showpacs, notitlepage]{revtex4-1}
+
+
+%\documentclass[aps, superscriptaddress,preprintnumbers,showpacs, article]{revtex4-1}
+%\documentclass[preprint, aps, superscriptaddress,preprintnumbers,showpacs]{revtex4-1}
+
+
+
+%%%%%%%%%%Trying out different style files
+%\usepackage{alphalph}
+%\usepackage{amstex, amsfonts}
+\usepackage{amsmath, amsfonts}
+
+
+%%%%%%%%%%%Trying out different style files
+
+
+
+
+
+\usepackage{xspace}
+
+
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+
+ \usepackage{algpseudocode} 
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[]{graphicx}        
+\usepackage{amsthm}
+\usepackage{natbib}
+\usepackage{enumerate}
+\usepackage{afterpage}
+\linespread{1.} % 1.1 seems nice.
+
+%\usepackage[margin=1.1in]{geometry}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Stuff which might help with figures
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{8}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+	% remember to use [htp] or [htpb] for placement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Stuff which might help with figures
+
+
+
+%\biboptions{sort&compress} % To make citations like [10 - 15]
+\newcommand{\quotes}[1]{``#1''}
+\newcommand{\expt}[1]{\left \langle #1 \right \rangle}
+
+
+%Can toggle this to comment out notes to  check size
+\newcommand{\Note}[1]{\textbf{\textcolor{red}{[Note-#1]}}}
+\definecolor{dark-gray}{gray}{0.3}
+\newcommand{\E}[1]{\textcolor{dark-gray}{#1}}
+%\newcommand{\Note}[1]{ }
+
+
+
+\newcommand{\paren}[1]{\left ( #1 \right )}
+\newcommand{\abs}[1]{\left | #1 \right |}
+
+\newcommand{\bracket}[1]{{\left [ #1 \right ]}}
+\renewcommand{\min}[2]{\ensuremath{\text{min}\left ( #1 ,\phantom{k} #2 \right )}}
+\newcommand{\B}[1]{\textcolor{blue} { #1}}
+
+
+
+\newcommand{\myequation}[1]{\begin{eqnarray} #1 \end{eqnarray}}
+\newcommand{\myequationn}[1]{\begin{align*} #1 \end{align*}}
+\newcommand{\thickhline}{\noalign{\hrule height 0.8pt}}
+\newcommand{\appendref}[1]{({Append. \ref{#1})}}
+\newcommand{\figref}[1]{({Fig. \ref{#1})}}
+
+
+\newenvironment{my_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{my_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\def \press{\ensuremath{P}}
+\def \behavpress{\ensuremath{P_{b}}}
+
+\def \grav{\ensuremath{g} \xspace}
+\def \resist{\ensuremath{\Omega} \xspace}
+\def \darcy{\ensuremath{\kappa} \xspace}
+\def \curr{\ensuremath{I} \xspace}
+\def \sysheight{\ensuremath{\textbf{L}} \xspace}
+\def \tambient{\ensuremath{\textbf{T}_{\text{amb}}} \xspace}
+\def \airvel{\ensuremath{\textbf{v}} \xspace}
+\def \airvisc{\ensuremath{\eta}\xspace}
+
+\def \conduct{\ensuremath{\kappa} \xspace}
+\def \curr{\ensuremath{I} \xspace}
+\def \dens{\ensuremath{\rho} \xspace}
+\def \meandens{\ensuremath{\bar{\dens}} \xspace}
+
+\def \dens{\ensuremath{\rho} \xspace}
+
+\def \evapcoeff{\ensuremath{\alpha_{\text{E}}}\xspace}
+\def \condcoeff{\ensuremath{\alpha_{\text{C}}}\xspace}
+\def \posit{\ensuremath{\vec{r}} \xspace}
+\def \driftbias{\ensuremath{\posit_{\text{b}}} \xspace}
+\def \diffus{\ensuremath{\text{D}} \xspace}
+\def \oxy{\ensuremath{\phi} \xspace}
+
+
+\def \metab{\ensuremath{\mathcal{M}}\xspace}
+
+%Mean Field stuff
+\def \meanevapperagent{\ensuremath{F} \xspace}
+\def \meanevap{\ensuremath{\mathcal{F}} \xspace}
+\def \meancondperagent{\ensuremath{G} \xspace}
+\def \meancond{\ensuremath{\mathcal{G}} \xspace}
+\def \meanflow{\ensuremath{\textbf{u}} \xspace}
+
+\def \chempot{\ensuremath{\mathcal{N}} \xspace}
+\def \div{\ensuremath{\text{DIV}} \xspace}
+\def \basediv{\ensuremath{\text{B}} \xspace}
+
+\def \voltage{\ensuremath{V}}
+
+\def \driv{\ensuremath{F}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Beginning of Actual Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\preprint{}
+
+
+\title{
+Code written for \quotes{Feedback Induced Phase Transitions in Active Heterogeneous Conductors}
+}
+
+
+
+\author{Samuel A. Ocko}
+\affiliation{Department of  Physics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA}
+\author{L. Mahadevan}
+\affiliation{School of Engineering and Applied Sciences, Department of Physics, Harvard University, Cambridge, Massachusetts 02138, USA}
+
+\maketitle
+
+
+
+There are three parts of the program:
+
+\begin{enumerate}
+\item
+The core part of the program is written in C++, which contains the simulations of the system and the linear equation solving required to compute currents. 
+\item
+Another part of the program is a wrapper for the first part, written in Objective-C, and is used for visualizing the system, as well as playing around with different parameter values.
+\item The last part of the program is written in MATLAB and is used to analyze the data generated by the first and second parts. 
+\end{enumerate}
+
+Note that in the programs, evapWindTax is used interchangably with the removal coefficient $\alpha_{\text{R}}$ (\quotes{Evaporation} of particles), while condWindTax is used interchangeably with the addition coefficient $\alpha_{\text{A}}$( \quotes{Condensation} of particles).
+
+
+\section{C++ code}
+
+\subsection{MyCircuit}
+Translates a list of cell resistances and driving voltages into a set of linear equations, solves it, and then translates the solution back into a list of currents between cells. Starting with our basic equations
+\myequationn{
+\curr_{ij} = \frac{1}{\resist_{ij}} \bracket{\voltage_{i} - \voltage_{j} + \driv_{ij}}, \qquad \div_{i} = \sum_{j} \curr_{ij} = 0. 
+}
+
+Where, in this case, $\driv_{ij} = \bracket{\posit_{j} - \posit_{i}} \cdot \hat{z}$. This gives us a linear equation to solve:
+\myequationn{
+\conduct \vec{V} + \vec{\basediv} = \vec{\div} = 0
+}
+%
+Where 
+\myequationn{
+\basediv_{i} = \sum_{j}  \frac{\driv_{ij}}{\resist_{ij}}
+}
+%
+And $\conduct$ is a sparse, positive-semidefinite symmetric matrix. Therefore, this set of linear equations which may be solved using the \text{Eigen::SimplicialLDLT$\langle$SpMat$\rangle$}  object \footnote{The entire Eigen package is contained within a subdirectory of the code}. Once we solve for the relative values of $\vec{\voltage}$, we can reconstruct $\vec{\curr}$. \\
+%
+
+
+It is also possible to have cells connected to a fixed voltage source through a variable conductance or to have a fixed, nonzero divergence, but these features are not used for the simulations done in the paper. 
+
+\subsection{MyAPMSystem}
+
+Maintains a state of the system, as well as simulating the dynamics of the system. The decision of which sites to remove particles from and add particles to is done through rejection sampling. MyAPMSystem contains an instance of MyCircuit in order to solve for the current through the network. 
+
+\subsection{MyAutomatorMode}
+
+Used to perform automated runs through different parameter values. The high-level idea is:
+
+\begin{enumerate}
+\item Load data from a txt file into MyAutomatorMode, which determines which parameters will be iterated through. 
+%
+\item Modify the MyAutomatorMode object to determine whether it will perform its own simulations or simply read the results of another simulation. 
+\begin{enumerate}
+	\item SimulateAndSnapshotizeMode will make the automator perform simulations and output a snapshot image of the final state
+	\item  linuxizeMode(mode) will make the automator perform its own simulations, but not output any images. It additionally changes the path to be the local path. (Called linuxize mode because the simulations in the paper were done on linux clusters). 
+	\item     Snapshotize(mode) will make the automator read the data and render a snapshot of the final state of the system.
+	\item  videoizeMode(mode) will make the automator read the data and render many images describing the evolution of the system. 
+	\end{enumerate}
+\item Use MyAutomatorMode to fill a list of SamsSingleRunParams, each which describes the parameters for a single run. 
+\item When iterate() is called, iterate through another item on the list, and run a single simulation. 
+%
+\end{enumerate}
+
+
+Five files are outputted:
+
+\begin{itemize}
+\item
+\emph{SingleStatePlot \ldots .txt}: Describes the final state
+
+\item
+\emph{EnsemblePlot\ldots .txt}: A list of system states after equilibration
+
+\item
+\emph{EvolutionPlot\ldots .txt}: A list of system states from the beginning to the end.
+
+\item 
+\emph{Conductivity \ldots .txt}: A single number with mean conductivity of the system. 
+
+\item 
+
+\emph{Snapshot \ldots .tiff}: A single number with mean conductivity of the system. 
+
+\item 
+
+\emph{Frames \ldots \text{/} Frame \ldots.tiff}: A single number with mean conductivity of the system. 
+
+
+
+\textbf{Mean field data}
+MyAutomator also has a method called generateMFTFiles(), which generates lists of conductivity as well as samples of $v_{i}/\conduct$ for both uniform densities as well as densities varying over short length scales. These files are then used by the MATLAB code to predict phase separation. 
+\end{itemize}
+
+\section{Objective-C Code}
+
+
+\subsection{MyView}
+Visualizes the state of MyAPMSystem, and can also save pictures to a tiff file. 
+
+\subsection{SamsChannelizationSolvingAppDelegate}
+Interfaces the Objective-C User interface with the C++ Core code. Mostly just data plumbing. 
+
+
+
+\section{MATLAB Code}
+
+Note; Permeability is used interchangeably with conductivity in the MATLAB code. 
+
+\subsection{doEverything}
+	The highest-level method, calls all the other methods. 
+\subsection{MFTEinsteinCriteria}
+	Takes the mean evaporation and condensation rates to predict the amplitude of different fluctuations. 
+\subsection{UniformPhaseSeparationPlot}
+	Uses the MFT evaporation and condensation rates to predict a phase separation. 
+\subsection{CrystalPhaseSeparationPlot}
+	Uses the MFT evaporation and condensation rates for the thinnest possible structures to predict a phase separation. 
+\subsection{isBimodal}
+	Decides whether a histogram with error bars is bimodal to a statistically significant degree.  		
+
+
+
+
+
+
+
+
+
+If anything isn't clear or you have questions about the code, please do not hesitate to contact samocko@gmail.com.
+
+
+
+
+
+
+
+
+
+  \end{document}
+%\clearpage
+%\newpage
+
+%
+
+
+
+
+
+
+
+
+
+

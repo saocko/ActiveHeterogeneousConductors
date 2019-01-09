@@ -1,0 +1,15 @@
+\BOOKMARK [0][-]{section*.1}{ Code written for ``Feedback Induced Phase Transitions in Active Heterogeneous Conductors'' }{}% 1
+\BOOKMARK [1][-]{section*.2}{C++ code}{section*.1}% 2
+\BOOKMARK [2][-]{section*.3}{MyCircuit}{section*.2}% 3
+\BOOKMARK [2][-]{section*.4}{MyAPMSystem}{section*.2}% 4
+\BOOKMARK [2][-]{section*.5}{MyAutomatorMode}{section*.2}% 5
+\BOOKMARK [1][-]{section*.6}{Objective-C Code}{section*.1}% 6
+\BOOKMARK [2][-]{section*.7}{MyView}{section*.6}% 7
+\BOOKMARK [2][-]{section*.8}{SamsChannelizationSolvingAppDelegate}{section*.6}% 8
+\BOOKMARK [1][-]{section*.9}{MATLAB Code}{section*.1}% 9
+\BOOKMARK [2][-]{section*.10}{doEverything}{section*.9}% 10
+\BOOKMARK [2][-]{section*.11}{MFTEinsteinCriteria}{section*.9}% 11
+\BOOKMARK [2][-]{section*.12}{UniformPhaseSeparationPlot}{section*.9}% 12
+\BOOKMARK [2][-]{section*.13}{CrystalPhaseSeparationPlot}{section*.9}% 13
+\BOOKMARK [2][-]{section*.14}{isBimodal}{section*.9}% 14
+\BOOKMARK [1][-]{section*.15}{References}{section*.1}% 15

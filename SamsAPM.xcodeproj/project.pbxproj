@@ -1,0 +1,1003 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9201A85417F1D46400A58505 /* FilePathHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9201A85217F1D46400A58505 /* FilePathHelpers.cpp */; };
+		9213D8F917FA75BB00A8DBFE /* LocalVelToPowerSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9213D8F717FA75BB00A8DBFE /* LocalVelToPowerSampler.cpp */; };
+		9213D8FF17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9213D8FD17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.cpp */; };
+		9213D90217FB0ED100A8DBFE /* VoltageCellTypeCalc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9213D90017FB0ECF00A8DBFE /* VoltageCellTypeCalc.cpp */; };
+		92261483166BE63F004D40F0 /* MyCircuitTranslations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226147F166BE63F004D40F0 /* MyCircuitTranslations.cpp */; };
+		92261484166BE63F004D40F0 /* MyCircuitConstructionMethods.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92261480166BE63F004D40F0 /* MyCircuitConstructionMethods.cpp */; };
+		92261485166BE63F004D40F0 /* MyCircuitAccMut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92261481166BE63F004D40F0 /* MyCircuitAccMut.cpp */; };
+		92261486166BE63F004D40F0 /* MyCircuit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92261482166BE63F004D40F0 /* MyCircuit.cpp */; };
+		9226148D166BF8C8004D40F0 /* MyNonConChanSys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226148B166BF8C5004D40F0 /* MyNonConChanSys.cpp */; };
+		9227AB3713B8E12E00CCD732 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9227AB3613B8E12E00CCD732 /* Accelerate.framework */; };
+		9227AB3913B8E13600CCD732 /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9227AB3813B8E13600CCD732 /* vecLib.framework */; };
+		922D64D11883A999009BDB18 /* MyAutomatorNewControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922D64D01883A999009BDB18 /* MyAutomatorNewControl.cpp */; };
+		923A96491639BC0400DE0982 /* IsCellTypeCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96351639BC0400DE0982 /* IsCellTypeCalculator.cpp */; };
+		923A964A1639BC0400DE0982 /* MyAPMSysConstructionMethods.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96371639BC0400DE0982 /* MyAPMSysConstructionMethods.cpp */; };
+		923A964B1639BC0400DE0982 /* MyAPMSysTranslationMethods.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96381639BC0400DE0982 /* MyAPMSysTranslationMethods.cpp */; };
+		923A964C1639BC0400DE0982 /* MyStopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A963A1639BC0400DE0982 /* MyStopwatch.cpp */; };
+		923A964D1639BC0400DE0982 /* MySystemCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A963C1639BC0400DE0982 /* MySystemCalculator.cpp */; };
+		923A964E1639BC0400DE0982 /* PowerCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A963F1639BC0400DE0982 /* PowerCalculator.cpp */; };
+		923A964F1639BC0400DE0982 /* UpdatePrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96411639BC0400DE0982 /* UpdatePrinter.cpp */; };
+		923A96501639BC0400DE0982 /* VoltageTimesAlphaCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96431639BC0400DE0982 /* VoltageTimesAlphaCalculator.cpp */; };
+		923A96511639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96451639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.cpp */; };
+		923A96521639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A96471639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.cpp */; };
+		924414CD17FA60CA0050E45C /* MyAutomatorHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924414CB17FA60CA0050E45C /* MyAutomatorHelpers.cpp */; };
+		9247257B16CFF06F00BBEA31 /* MyAutomatorListGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9247257816CFF06F00BBEA31 /* MyAutomatorListGenerator.cpp */; };
+		9247257C16CFF06F00BBEA31 /* MyRegionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9247257916CFF06F00BBEA31 /* MyRegionHelper.cpp */; };
+		9247258016CFF2BC00BBEA31 /* MyProgressPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9247257E16CFF2BC00BBEA31 /* MyProgressPrinter.cpp */; };
+		925738EF1607EC8D00C355CA /* CppHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738D71607EC8D00C355CA /* CppHelper.cpp */; };
+		925738F01607EC8D00C355CA /* DataCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738D91607EC8D00C355CA /* DataCollector.cpp */; };
+		925738F11607EC8D00C355CA /* MyAPMSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738DD1607EC8D00C355CA /* MyAPMSystem.cpp */; };
+		925738F21607EC8D00C355CA /* MyAPMSysAccMut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738DF1607EC8D00C355CA /* MyAPMSysAccMut.cpp */; };
+		925738F31607EC8D00C355CA /* MyAPMSysInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738E01607EC8D00C355CA /* MyAPMSysInit.cpp */; };
+		925738F41607EC8D00C355CA /* MyAPMSysModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738E11607EC8D00C355CA /* MyAPMSysModel.cpp */; };
+		925738FC1607EC8D00C355CA /* SquareIndexHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925738EC1607EC8D00C355CA /* SquareIndexHelper.cpp */; };
+		927CD50413A1A00600F39B8C /* MyView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 927CD50313A1A00600F39B8C /* MyView.mm */; };
+		928A016C1607EA6200738037 /* MyAutomator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 928A016A1607EA6200738037 /* MyAutomator.cpp */; };
+		92920DB1163F04DF009526F3 /* ExpToVelSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92920DAB163F04DF009526F3 /* ExpToVelSampler.cpp */; };
+		92920DB2163F04DF009526F3 /* MyRejectionSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92920DAD163F04DF009526F3 /* MyRejectionSampler.cpp */; };
+		92920DB3163F04DF009526F3 /* VelToPowerSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92920DAF163F04DF009526F3 /* VelToPowerSampler.cpp */; };
+		92A8467A1639D63500A93172 /* MyTxtPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A846781639D63500A93172 /* MyTxtPrinter.cpp */; };
+		92AC5E6613A1535700157809 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AC5E6513A1535700157809 /* Cocoa.framework */; };
+		92AC5E7013A1535700157809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92AC5E6E13A1535700157809 /* InfoPlist.strings */; };
+		92AC5E7313A1535700157809 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AC5E7213A1535700157809 /* main.m */; };
+		92AC5E7613A1535700157809 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 92AC5E7413A1535700157809 /* Credits.rtf */; };
+		92AC5E7913A1535700157809 /* MyAPMAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92AC5E7813A1535700157809 /* MyAPMAppDelegate.mm */; };
+		92AC5E7C13A1535700157809 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AC5E7A13A1535700157809 /* MainMenu.xib */; };
+		92AC5E8313A1535700157809 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AC5E6513A1535700157809 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92AC5E8413A1535700157809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92AC5E5813A1535600157809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92AC5E6013A1535700157809;
+			remoteInfo = SamsBeeSolving;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9201A85217F1D46400A58505 /* FilePathHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FilePathHelpers.cpp; path = PureCpp/FilePathHelpers.cpp; sourceTree = "<group>"; };
+		9201A85317F1D46400A58505 /* FilePathHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilePathHelpers.h; path = PureCpp/FilePathHelpers.h; sourceTree = "<group>"; };
+		920E7C3D13A33885005EA06B /* ObjCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCHelper.h; sourceTree = "<group>"; };
+		9213D8F717FA75BB00A8DBFE /* LocalVelToPowerSampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalVelToPowerSampler.cpp; path = PureCpp/LocalVelToPowerSampler.cpp; sourceTree = "<group>"; };
+		9213D8F817FA75BB00A8DBFE /* LocalVelToPowerSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalVelToPowerSampler.h; path = PureCpp/LocalVelToPowerSampler.h; sourceTree = "<group>"; };
+		9213D8FD17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalLogVoltageToPowerCalculator.cpp; path = PureCpp/LocalLogVoltageToPowerCalculator.cpp; sourceTree = "<group>"; };
+		9213D8FE17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalLogVoltageToPowerCalculator.h; path = PureCpp/LocalLogVoltageToPowerCalculator.h; sourceTree = "<group>"; };
+		9213D90017FB0ECF00A8DBFE /* VoltageCellTypeCalc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoltageCellTypeCalc.cpp; path = PureCpp/VoltageCellTypeCalc.cpp; sourceTree = "<group>"; };
+		9213D90117FB0ED000A8DBFE /* VoltageCellTypeCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoltageCellTypeCalc.h; path = PureCpp/VoltageCellTypeCalc.h; sourceTree = "<group>"; };
+		9226147E166BE63E004D40F0 /* MyCircuit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCircuit.h; path = PureCpp/MyCircuit.h; sourceTree = "<group>"; };
+		9226147F166BE63F004D40F0 /* MyCircuitTranslations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyCircuitTranslations.cpp; path = PureCpp/MyCircuitTranslations.cpp; sourceTree = "<group>"; };
+		92261480166BE63F004D40F0 /* MyCircuitConstructionMethods.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyCircuitConstructionMethods.cpp; path = PureCpp/MyCircuitConstructionMethods.cpp; sourceTree = "<group>"; };
+		92261481166BE63F004D40F0 /* MyCircuitAccMut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyCircuitAccMut.cpp; path = PureCpp/MyCircuitAccMut.cpp; sourceTree = "<group>"; };
+		92261482166BE63F004D40F0 /* MyCircuit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyCircuit.cpp; path = PureCpp/MyCircuit.cpp; sourceTree = "<group>"; };
+		9226148B166BF8C5004D40F0 /* MyNonConChanSys.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyNonConChanSys.cpp; path = PureCpp/MyNonConChanSys.cpp; sourceTree = "<group>"; };
+		9226148C166BF8C6004D40F0 /* MyNonConChanSys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyNonConChanSys.h; path = PureCpp/MyNonConChanSys.h; sourceTree = "<group>"; };
+		9227AB3613B8E12E00CCD732 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		9227AB3813B8E13600CCD732 /* vecLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vecLib.framework; path = System/Library/Frameworks/vecLib.framework; sourceTree = SDKROOT; };
+		922D64D01883A999009BDB18 /* MyAutomatorNewControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAutomatorNewControl.cpp; path = PureCpp/MyAutomatorNewControl.cpp; sourceTree = "<group>"; };
+		923A96351639BC0400DE0982 /* IsCellTypeCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IsCellTypeCalculator.cpp; path = PureCpp/IsCellTypeCalculator.cpp; sourceTree = "<group>"; };
+		923A96361639BC0400DE0982 /* IsCellTypeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IsCellTypeCalculator.h; path = PureCpp/IsCellTypeCalculator.h; sourceTree = "<group>"; };
+		923A96371639BC0400DE0982 /* MyAPMSysConstructionMethods.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAPMSysConstructionMethods.cpp; path = PureCpp/MyAPMSysConstructionMethods.cpp; sourceTree = "<group>"; };
+		923A96381639BC0400DE0982 /* MyAPMSysTranslationMethods.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAPMSysTranslationMethods.cpp; path = PureCpp/MyAPMSysTranslationMethods.cpp; sourceTree = "<group>"; };
+		923A96391639BC0400DE0982 /* MyOtherEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyOtherEnums.h; path = PureCpp/MyOtherEnums.h; sourceTree = "<group>"; };
+		923A963A1639BC0400DE0982 /* MyStopwatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyStopwatch.cpp; path = PureCpp/MyStopwatch.cpp; sourceTree = "<group>"; };
+		923A963B1639BC0400DE0982 /* MyStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyStopwatch.h; path = PureCpp/MyStopwatch.h; sourceTree = "<group>"; };
+		923A963C1639BC0400DE0982 /* MySystemCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MySystemCalculator.cpp; path = PureCpp/MySystemCalculator.cpp; sourceTree = "<group>"; };
+		923A963D1639BC0400DE0982 /* MySystemCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySystemCalculator.h; path = PureCpp/MySystemCalculator.h; sourceTree = "<group>"; };
+		923A963E1639BC0400DE0982 /* MySysCellType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySysCellType.h; path = PureCpp/MySysCellType.h; sourceTree = "<group>"; };
+		923A963F1639BC0400DE0982 /* PowerCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PowerCalculator.cpp; path = PureCpp/PowerCalculator.cpp; sourceTree = "<group>"; };
+		923A96401639BC0400DE0982 /* PowerCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerCalculator.h; path = PureCpp/PowerCalculator.h; sourceTree = "<group>"; };
+		923A96411639BC0400DE0982 /* UpdatePrinter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdatePrinter.cpp; path = PureCpp/UpdatePrinter.cpp; sourceTree = "<group>"; };
+		923A96421639BC0400DE0982 /* UpdatePrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdatePrinter.h; path = PureCpp/UpdatePrinter.h; sourceTree = "<group>"; };
+		923A96431639BC0400DE0982 /* VoltageTimesAlphaCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoltageTimesAlphaCalculator.cpp; path = PureCpp/VoltageTimesAlphaCalculator.cpp; sourceTree = "<group>"; };
+		923A96441639BC0400DE0982 /* VoltageTimesAlphaCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoltageTimesAlphaCalculator.h; path = PureCpp/VoltageTimesAlphaCalculator.h; sourceTree = "<group>"; };
+		923A96451639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoltageTimesAlphaCellTypeCalc.cpp; path = PureCpp/VoltageTimesAlphaCellTypeCalc.cpp; sourceTree = "<group>"; };
+		923A96461639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoltageTimesAlphaCellTypeCalc.h; path = PureCpp/VoltageTimesAlphaCellTypeCalc.h; sourceTree = "<group>"; };
+		923A96471639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VoltageTimesAlphaCellTypeLocalCalc.cpp; path = PureCpp/VoltageTimesAlphaCellTypeLocalCalc.cpp; sourceTree = "<group>"; };
+		923A96481639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoltageTimesAlphaCellTypeLocalCalc.h; path = PureCpp/VoltageTimesAlphaCellTypeLocalCalc.h; sourceTree = "<group>"; };
+		924414CB17FA60CA0050E45C /* MyAutomatorHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAutomatorHelpers.cpp; path = PureCpp/MyAutomatorHelpers.cpp; sourceTree = "<group>"; };
+		924414CC17FA60CA0050E45C /* MyAutomatorHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAutomatorHelpers.h; path = PureCpp/MyAutomatorHelpers.h; sourceTree = "<group>"; };
+		9247257816CFF06F00BBEA31 /* MyAutomatorListGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAutomatorListGenerator.cpp; path = PureCpp/MyAutomatorListGenerator.cpp; sourceTree = "<group>"; };
+		9247257916CFF06F00BBEA31 /* MyRegionHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyRegionHelper.cpp; path = PureCpp/MyRegionHelper.cpp; sourceTree = "<group>"; };
+		9247257E16CFF2BC00BBEA31 /* MyProgressPrinter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyProgressPrinter.cpp; path = PureCpp/MyProgressPrinter.cpp; sourceTree = "<group>"; };
+		9247257F16CFF2BC00BBEA31 /* MyProgressPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyProgressPrinter.h; path = PureCpp/MyProgressPrinter.h; sourceTree = "<group>"; };
+		9247258116CFF3AA00BBEA31 /* MySystemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySystemCell.h; path = PureCpp/MySystemCell.h; sourceTree = "<group>"; };
+		9247258216CFF61300BBEA31 /* MyRegionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyRegionHelper.h; path = PureCpp/MyRegionHelper.h; sourceTree = "<group>"; };
+		925738D71607EC8D00C355CA /* CppHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CppHelper.cpp; path = PureCpp/CppHelper.cpp; sourceTree = "<group>"; };
+		925738D81607EC8D00C355CA /* CppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CppHelper.h; path = PureCpp/CppHelper.h; sourceTree = "<group>"; };
+		925738D91607EC8D00C355CA /* DataCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataCollector.cpp; path = PureCpp/DataCollector.cpp; sourceTree = "<group>"; };
+		925738DA1607EC8D00C355CA /* DataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataCollector.h; path = PureCpp/DataCollector.h; sourceTree = "<group>"; };
+		925738DB1607EC8D00C355CA /* My2Vec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = My2Vec.h; path = PureCpp/My2Vec.h; sourceTree = "<group>"; };
+		925738DC1607EC8D00C355CA /* MyCircuitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCircuitCell.h; path = PureCpp/MyCircuitCell.h; sourceTree = "<group>"; };
+		925738DD1607EC8D00C355CA /* MyAPMSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAPMSystem.cpp; path = PureCpp/MyAPMSystem.cpp; sourceTree = "<group>"; };
+		925738DE1607EC8D00C355CA /* MyAPMSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAPMSystem.h; path = PureCpp/MyAPMSystem.h; sourceTree = "<group>"; };
+		925738DF1607EC8D00C355CA /* MyAPMSysAccMut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAPMSysAccMut.cpp; path = PureCpp/MyAPMSysAccMut.cpp; sourceTree = "<group>"; };
+		925738E01607EC8D00C355CA /* MyAPMSysInit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAPMSysInit.cpp; path = PureCpp/MyAPMSysInit.cpp; sourceTree = "<group>"; };
+		925738E11607EC8D00C355CA /* MyAPMSysModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAPMSysModel.cpp; path = PureCpp/MyAPMSysModel.cpp; sourceTree = "<group>"; };
+		925738EC1607EC8D00C355CA /* SquareIndexHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SquareIndexHelper.cpp; path = PureCpp/SquareIndexHelper.cpp; sourceTree = "<group>"; };
+		925738ED1607EC8D00C355CA /* SquareIndexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquareIndexHelper.h; path = PureCpp/SquareIndexHelper.h; sourceTree = "<group>"; };
+		925738EE1607EC8D00C355CA /* SystemParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemParams.h; path = PureCpp/SystemParams.h; sourceTree = "<group>"; };
+		925EBA7D13B922AC00B93682 /* GraphicsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsHelper.h; sourceTree = "<group>"; };
+		927CD50213A1A00600F39B8C /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		927CD50313A1A00600F39B8C /* MyView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyView.mm; sourceTree = "<group>"; };
+		928A016A1607EA6200738037 /* MyAutomator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyAutomator.cpp; path = PureCpp/MyAutomator.cpp; sourceTree = "<group>"; };
+		928A016B1607EA6200738037 /* MyAutomator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAutomator.h; path = PureCpp/MyAutomator.h; sourceTree = "<group>"; };
+		928D13701608C68A00EBA4DC /* SamsAPMTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamsAPMTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92920DAB163F04DF009526F3 /* ExpToVelSampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExpToVelSampler.cpp; path = PureCpp/ExpToVelSampler.cpp; sourceTree = "<group>"; };
+		92920DAC163F04DF009526F3 /* ExpToVelSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpToVelSampler.h; path = PureCpp/ExpToVelSampler.h; sourceTree = "<group>"; };
+		92920DAD163F04DF009526F3 /* MyRejectionSampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyRejectionSampler.cpp; path = PureCpp/MyRejectionSampler.cpp; sourceTree = "<group>"; };
+		92920DAE163F04DF009526F3 /* MyRejectionSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyRejectionSampler.h; path = PureCpp/MyRejectionSampler.h; sourceTree = "<group>"; };
+		92920DAF163F04DF009526F3 /* VelToPowerSampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VelToPowerSampler.cpp; path = PureCpp/VelToPowerSampler.cpp; sourceTree = "<group>"; };
+		92920DB0163F04DF009526F3 /* VelToPowerSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VelToPowerSampler.h; path = PureCpp/VelToPowerSampler.h; sourceTree = "<group>"; };
+		92A846781639D63500A93172 /* MyTxtPrinter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyTxtPrinter.cpp; path = PureCpp/MyTxtPrinter.cpp; sourceTree = "<group>"; };
+		92A846791639D63500A93172 /* MyTxtPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTxtPrinter.h; path = PureCpp/MyTxtPrinter.h; sourceTree = "<group>"; };
+		92AC5E6113A1535700157809 /* SamsAPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsAPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AC5E6513A1535700157809 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		92AC5E6813A1535700157809 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		92AC5E6913A1535700157809 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92AC5E6A13A1535700157809 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		92AC5E6D13A1535700157809 /* SamsAPM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SamsAPM-Info.plist"; sourceTree = "<group>"; };
+		92AC5E6F13A1535700157809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92AC5E7113A1535700157809 /* SamsAPM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SamsAPM-Prefix.pch"; sourceTree = "<group>"; };
+		92AC5E7213A1535700157809 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92AC5E7513A1535700157809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		92AC5E7713A1535700157809 /* MyAPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAPMAppDelegate.h; sourceTree = "<group>"; };
+		92AC5E7813A1535700157809 /* MyAPMAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = MyAPMAppDelegate.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		92AC5E7B13A1535700157809 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92AC5E5E13A1535700157809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9227AB3913B8E13600CCD732 /* vecLib.framework in Frameworks */,
+				9227AB3713B8E12E00CCD732 /* Accelerate.framework in Frameworks */,
+				92AC5E6613A1535700157809 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AC5E7E13A1535700157809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AC5E8313A1535700157809 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9201A84D17F1374B00A58505 /* MyAutomatorHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				924414CB17FA60CA0050E45C /* MyAutomatorHelpers.cpp */,
+				924414CC17FA60CA0050E45C /* MyAutomatorHelpers.h */,
+			);
+			name = MyAutomatorHelpers;
+			sourceTree = "<group>";
+		};
+		9201A85117F1D43B00A58505 /* FilePathHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				9201A85217F1D46400A58505 /* FilePathHelpers.cpp */,
+				9201A85317F1D46400A58505 /* FilePathHelpers.h */,
+			);
+			name = FilePathHelpers;
+			sourceTree = "<group>";
+		};
+		9201DA3B160CF3F0008A5894 /* MySystemCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				92C8B90E160D153F00AB8417 /* SysCalc */,
+			);
+			name = MySystemCalculator;
+			sourceTree = "<group>";
+		};
+		920BEB531613502800E73EA0 /* MyTxtPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				92A846781639D63500A93172 /* MyTxtPrinter.cpp */,
+				92A846791639D63500A93172 /* MyTxtPrinter.h */,
+			);
+			name = MyTxtPrinter;
+			sourceTree = "<group>";
+		};
+		920D4CFE13B8E3E90084B25C /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				92AC5E7713A1535700157809 /* MyAPMAppDelegate.h */,
+				92AC5E7813A1535700157809 /* MyAPMAppDelegate.mm */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		9213D8FB17FA75C400A8DBFE /* LocalVelToPowerSampler */ = {
+			isa = PBXGroup;
+			children = (
+				9213D8F717FA75BB00A8DBFE /* LocalVelToPowerSampler.cpp */,
+				9213D8F817FA75BB00A8DBFE /* LocalVelToPowerSampler.h */,
+			);
+			name = LocalVelToPowerSampler;
+			sourceTree = "<group>";
+		};
+		9213D8FC17FA796E00A8DBFE /* LocalLogVoltageToPowerCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				9213D8FD17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.cpp */,
+				9213D8FE17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.h */,
+			);
+			name = LocalLogVoltageToPowerCalculator;
+			sourceTree = "<group>";
+		};
+		9213D90317FB0ED800A8DBFE /* VoltageCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				9213D90017FB0ECF00A8DBFE /* VoltageCellTypeCalc.cpp */,
+				9213D90117FB0ED000A8DBFE /* VoltageCellTypeCalc.h */,
+			);
+			name = VoltageCalculator;
+			sourceTree = "<group>";
+		};
+		921E4266160A3FD70030894D /* CppHelper */ = {
+			isa = PBXGroup;
+			children = (
+				925738D71607EC8D00C355CA /* CppHelper.cpp */,
+				925738D81607EC8D00C355CA /* CppHelper.h */,
+			);
+			name = CppHelper;
+			sourceTree = "<group>";
+		};
+		92261472166BE420004D40F0 /* MyCircuit */ = {
+			isa = PBXGroup;
+			children = (
+				9226147E166BE63E004D40F0 /* MyCircuit.h */,
+				9226147F166BE63F004D40F0 /* MyCircuitTranslations.cpp */,
+				92261480166BE63F004D40F0 /* MyCircuitConstructionMethods.cpp */,
+				92261481166BE63F004D40F0 /* MyCircuitAccMut.cpp */,
+				92261482166BE63F004D40F0 /* MyCircuit.cpp */,
+				925738DC1607EC8D00C355CA /* MyCircuitCell.h */,
+			);
+			name = MyCircuit;
+			sourceTree = "<group>";
+		};
+		9226148A166BF77A004D40F0 /* MyNonConChanSys */ = {
+			isa = PBXGroup;
+			children = (
+				9226148B166BF8C5004D40F0 /* MyNonConChanSys.cpp */,
+				9226148C166BF8C6004D40F0 /* MyNonConChanSys.h */,
+			);
+			name = MyNonConChanSys;
+			sourceTree = "<group>";
+		};
+		9227AB2E13B8E00000CCD732 /* MyView */ = {
+			isa = PBXGroup;
+			children = (
+				927CD50213A1A00600F39B8C /* MyView.h */,
+				927CD50313A1A00600F39B8C /* MyView.mm */,
+				925EBA7D13B922AC00B93682 /* GraphicsHelper.h */,
+				920E7C3D13A33885005EA06B /* ObjCHelper.h */,
+			);
+			name = MyView;
+			sourceTree = "<group>";
+		};
+		922D64CE18838246009BDB18 /* MyAPMSystemHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				92920D9D163EFBAD009526F3 /* MyRejectionSampler */,
+				9201DA3B160CF3F0008A5894 /* MySystemCalculator */,
+				922D64CF18838324009BDB18 /* APMSystemStructsAndEnums */,
+			);
+			name = MyAPMSystemHelpers;
+			sourceTree = "<group>";
+		};
+		922D64CF18838324009BDB18 /* APMSystemStructsAndEnums */ = {
+			isa = PBXGroup;
+			children = (
+				923A963E1639BC0400DE0982 /* MySysCellType.h */,
+				923A96391639BC0400DE0982 /* MyOtherEnums.h */,
+				9247258116CFF3AA00BBEA31 /* MySystemCell.h */,
+			);
+			name = APMSystemStructsAndEnums;
+			sourceTree = "<group>";
+		};
+		92300C3913AFAB42001389B7 /* MyAPMSystem */ = {
+			isa = PBXGroup;
+			children = (
+				925738DD1607EC8D00C355CA /* MyAPMSystem.cpp */,
+				923A96371639BC0400DE0982 /* MyAPMSysConstructionMethods.cpp */,
+				925738EE1607EC8D00C355CA /* SystemParams.h */,
+				925738E11607EC8D00C355CA /* MyAPMSysModel.cpp */,
+				923A96381639BC0400DE0982 /* MyAPMSysTranslationMethods.cpp */,
+				925738DE1607EC8D00C355CA /* MyAPMSystem.h */,
+				925738E01607EC8D00C355CA /* MyAPMSysInit.cpp */,
+				925738DF1607EC8D00C355CA /* MyAPMSysAccMut.cpp */,
+				922D64CE18838246009BDB18 /* MyAPMSystemHelpers */,
+				92429A2013A6AFAA009ADF53 /* Helpers */,
+				9226148A166BF77A004D40F0 /* MyNonConChanSys */,
+			);
+			name = MyAPMSystem;
+			sourceTree = "<group>";
+		};
+		923A96541639BD0C00DE0982 /* OtherHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				923A96551639BD8D00DE0982 /* SysCallWrappers */,
+				92591B661572FBAB00F9D6A7 /* DataCollector */,
+				925EBA7913B9220000B93682 /* SquareIndexHelper */,
+				925738FD1607ED6100C355CA /* StructsAndEnums */,
+			);
+			name = OtherHelpers;
+			sourceTree = "<group>";
+		};
+		923A96551639BD8D00DE0982 /* SysCallWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				9201A85117F1D43B00A58505 /* FilePathHelpers */,
+				927775BB16A9C56B00481354 /* MyProgressPrinter */,
+				92CE3CC8160928F300185F6D /* UpdatePrinter */,
+				920BEB531613502800E73EA0 /* MyTxtPrinter */,
+				92D534B916307C1F009B2944 /* MyStopwatch */,
+			);
+			name = SysCallWrappers;
+			sourceTree = "<group>";
+		};
+		92429A2013A6AFAA009ADF53 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				923A96541639BD0C00DE0982 /* OtherHelpers */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		92429A2113A6AFCF009ADF53 /* MainObjects */ = {
+			isa = PBXGroup;
+			children = (
+				92300C3913AFAB42001389B7 /* MyAPMSystem */,
+				928D13731609173100EBA4DC /* MyAutomator */,
+				92261472166BE420004D40F0 /* MyCircuit */,
+				9227AB2E13B8E00000CCD732 /* MyView */,
+				920D4CFE13B8E3E90084B25C /* App Delegate */,
+			);
+			name = MainObjects;
+			sourceTree = "<group>";
+		};
+		9251F930167704B3003137C4 /* MyRegionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9247257916CFF06F00BBEA31 /* MyRegionHelper.cpp */,
+				9247258216CFF61300BBEA31 /* MyRegionHelper.h */,
+			);
+			name = MyRegionHelper;
+			sourceTree = "<group>";
+		};
+		925738FD1607ED6100C355CA /* StructsAndEnums */ = {
+			isa = PBXGroup;
+			children = (
+				925738DB1607EC8D00C355CA /* My2Vec.h */,
+				921E4266160A3FD70030894D /* CppHelper */,
+			);
+			name = StructsAndEnums;
+			sourceTree = "<group>";
+		};
+		92591B661572FBAB00F9D6A7 /* DataCollector */ = {
+			isa = PBXGroup;
+			children = (
+				925738D91607EC8D00C355CA /* DataCollector.cpp */,
+				925738DA1607EC8D00C355CA /* DataCollector.h */,
+			);
+			name = DataCollector;
+			sourceTree = "<group>";
+		};
+		925EBA7913B9220000B93682 /* SquareIndexHelper */ = {
+			isa = PBXGroup;
+			children = (
+				925738EC1607EC8D00C355CA /* SquareIndexHelper.cpp */,
+				925738ED1607EC8D00C355CA /* SquareIndexHelper.h */,
+			);
+			name = SquareIndexHelper;
+			sourceTree = "<group>";
+		};
+		927775BB16A9C56B00481354 /* MyProgressPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				9247257E16CFF2BC00BBEA31 /* MyProgressPrinter.cpp */,
+				9247257F16CFF2BC00BBEA31 /* MyProgressPrinter.h */,
+			);
+			name = MyProgressPrinter;
+			sourceTree = "<group>";
+		};
+		928D13731609173100EBA4DC /* MyAutomator */ = {
+			isa = PBXGroup;
+			children = (
+				9247257816CFF06F00BBEA31 /* MyAutomatorListGenerator.cpp */,
+				928A016A1607EA6200738037 /* MyAutomator.cpp */,
+				922D64D01883A999009BDB18 /* MyAutomatorNewControl.cpp */,
+				928A016B1607EA6200738037 /* MyAutomator.h */,
+				9251F930167704B3003137C4 /* MyRegionHelper */,
+				9201A84D17F1374B00A58505 /* MyAutomatorHelpers */,
+			);
+			name = MyAutomator;
+			sourceTree = "<group>";
+		};
+		928FF1FB160CFC0000AB6B92 /* VoltageTimesAlphaCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				923A96431639BC0400DE0982 /* VoltageTimesAlphaCalculator.cpp */,
+				923A96441639BC0400DE0982 /* VoltageTimesAlphaCalculator.h */,
+				92D1F4D7160D057D00AFF991 /* VoltageTimesAlphaCellType */,
+			);
+			name = VoltageTimesAlphaCalculator;
+			sourceTree = "<group>";
+		};
+		92920D9D163EFBAD009526F3 /* MyRejectionSampler */ = {
+			isa = PBXGroup;
+			children = (
+				92920D9F163EFBC2009526F3 /* SuperClass */,
+				92920DA7163F02F4009526F3 /* VelToPowerSampler */,
+				92920DA3163F00B4009526F3 /* ExpToVelSampler */,
+			);
+			name = MyRejectionSampler;
+			sourceTree = "<group>";
+		};
+		92920D9F163EFBC2009526F3 /* SuperClass */ = {
+			isa = PBXGroup;
+			children = (
+				92920DAD163F04DF009526F3 /* MyRejectionSampler.cpp */,
+				92920DAE163F04DF009526F3 /* MyRejectionSampler.h */,
+			);
+			name = SuperClass;
+			sourceTree = "<group>";
+		};
+		92920DA3163F00B4009526F3 /* ExpToVelSampler */ = {
+			isa = PBXGroup;
+			children = (
+				92920DAB163F04DF009526F3 /* ExpToVelSampler.cpp */,
+				92920DAC163F04DF009526F3 /* ExpToVelSampler.h */,
+			);
+			name = ExpToVelSampler;
+			sourceTree = "<group>";
+		};
+		92920DA7163F02F4009526F3 /* VelToPowerSampler */ = {
+			isa = PBXGroup;
+			children = (
+				92920DAF163F04DF009526F3 /* VelToPowerSampler.cpp */,
+				92920DB0163F04DF009526F3 /* VelToPowerSampler.h */,
+				9213D8FB17FA75C400A8DBFE /* LocalVelToPowerSampler */,
+			);
+			name = VelToPowerSampler;
+			sourceTree = "<group>";
+		};
+		92AC5E5613A1535600157809 = {
+			isa = PBXGroup;
+			children = (
+				92AC5E7A13A1535700157809 /* MainMenu.xib */,
+				92AC5E6B13A1535700157809 /* SamsAPM */,
+				92AC5E6413A1535700157809 /* Frameworks */,
+				92AC5E6213A1535700157809 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92AC5E6213A1535700157809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92AC5E6113A1535700157809 /* SamsAPM.app */,
+				928D13701608C68A00EBA4DC /* SamsAPMTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92AC5E6413A1535700157809 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9227AB3813B8E13600CCD732 /* vecLib.framework */,
+				9227AB3613B8E12E00CCD732 /* Accelerate.framework */,
+				92AC5E6513A1535700157809 /* Cocoa.framework */,
+				92AC5E6713A1535700157809 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92AC5E6713A1535700157809 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92AC5E6813A1535700157809 /* AppKit.framework */,
+				92AC5E6913A1535700157809 /* CoreData.framework */,
+				92AC5E6A13A1535700157809 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		92AC5E6B13A1535700157809 /* SamsAPM */ = {
+			isa = PBXGroup;
+			children = (
+				92429A2113A6AFCF009ADF53 /* MainObjects */,
+				92AC5E6C13A1535700157809 /* Supporting Files */,
+			);
+			name = SamsAPM;
+			path = SamsBeeSolving;
+			sourceTree = "<group>";
+		};
+		92AC5E6C13A1535700157809 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92AC5E6D13A1535700157809 /* SamsAPM-Info.plist */,
+				92AC5E6E13A1535700157809 /* InfoPlist.strings */,
+				92AC5E7113A1535700157809 /* SamsAPM-Prefix.pch */,
+				92AC5E7213A1535700157809 /* main.m */,
+				92AC5E7413A1535700157809 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92C8B90E160D153F00AB8417 /* SysCalc */ = {
+			isa = PBXGroup;
+			children = (
+				92D1F4DC160D0B2100AFF991 /* SuperClass */,
+				92D1F4DB160D0B0B00AFF991 /* PowerCalculator */,
+				92D1F4E1160D0F3900AFF991 /* IsCellTypeCalculator */,
+			);
+			name = SysCalc;
+			sourceTree = "<group>";
+		};
+		92CE3CC8160928F300185F6D /* UpdatePrinter */ = {
+			isa = PBXGroup;
+			children = (
+				923A96411639BC0400DE0982 /* UpdatePrinter.cpp */,
+				923A96421639BC0400DE0982 /* UpdatePrinter.h */,
+			);
+			name = UpdatePrinter;
+			sourceTree = "<group>";
+		};
+		92D1F4D7160D057D00AFF991 /* VoltageTimesAlphaCellType */ = {
+			isa = PBXGroup;
+			children = (
+				923A96461639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.h */,
+				923A96451639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.cpp */,
+				92F5A89A1610D980003CE317 /* VoltageTimesAlphaCellTypeLocal */,
+			);
+			name = VoltageTimesAlphaCellType;
+			sourceTree = "<group>";
+		};
+		92D1F4DB160D0B0B00AFF991 /* PowerCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				9213D90317FB0ED800A8DBFE /* VoltageCalculator */,
+				928FF1FB160CFC0000AB6B92 /* VoltageTimesAlphaCalculator */,
+				923A963F1639BC0400DE0982 /* PowerCalculator.cpp */,
+				923A96401639BC0400DE0982 /* PowerCalculator.h */,
+			);
+			name = PowerCalculator;
+			sourceTree = "<group>";
+		};
+		92D1F4DC160D0B2100AFF991 /* SuperClass */ = {
+			isa = PBXGroup;
+			children = (
+				923A963C1639BC0400DE0982 /* MySystemCalculator.cpp */,
+				923A963D1639BC0400DE0982 /* MySystemCalculator.h */,
+			);
+			name = SuperClass;
+			sourceTree = "<group>";
+		};
+		92D1F4E1160D0F3900AFF991 /* IsCellTypeCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				923A96351639BC0400DE0982 /* IsCellTypeCalculator.cpp */,
+				923A96361639BC0400DE0982 /* IsCellTypeCalculator.h */,
+			);
+			name = IsCellTypeCalculator;
+			sourceTree = "<group>";
+		};
+		92D534B916307C1F009B2944 /* MyStopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				923A963A1639BC0400DE0982 /* MyStopwatch.cpp */,
+				923A963B1639BC0400DE0982 /* MyStopwatch.h */,
+			);
+			name = MyStopwatch;
+			sourceTree = "<group>";
+		};
+		92F5A89A1610D980003CE317 /* VoltageTimesAlphaCellTypeLocal */ = {
+			isa = PBXGroup;
+			children = (
+				923A96481639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.h */,
+				923A96471639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.cpp */,
+				9213D8FC17FA796E00A8DBFE /* LocalLogVoltageToPowerCalculator */,
+			);
+			name = VoltageTimesAlphaCellTypeLocal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92AC5E6013A1535700157809 /* SamsAPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AC5E9313A1535700157809 /* Build configuration list for PBXNativeTarget "SamsAPM" */;
+			buildPhases = (
+				92AC5E5D13A1535700157809 /* Sources */,
+				92AC5E5E13A1535700157809 /* Frameworks */,
+				92AC5E5F13A1535700157809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamsAPM;
+			productName = SamsBeeSolving;
+			productReference = 92AC5E6113A1535700157809 /* SamsAPM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92AC5E8113A1535700157809 /* SamsAPMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AC5E9613A1535700157809 /* Build configuration list for PBXNativeTarget "SamsAPMTests" */;
+			buildPhases = (
+				92AC5E7D13A1535700157809 /* Sources */,
+				92AC5E7E13A1535700157809 /* Frameworks */,
+				92AC5E7F13A1535700157809 /* Resources */,
+				92AC5E8013A1535700157809 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92AC5E8513A1535700157809 /* PBXTargetDependency */,
+			);
+			name = SamsAPMTests;
+			productName = SamsBeeSolvingTests;
+			productReference = 928D13701608C68A00EBA4DC /* SamsAPMTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92AC5E5813A1535600157809 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = MIT;
+			};
+			buildConfigurationList = 92AC5E5B13A1535600157809 /* Build configuration list for PBXProject "SamsAPM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 92AC5E5613A1535600157809;
+			productRefGroup = 92AC5E6213A1535700157809 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92AC5E6013A1535700157809 /* SamsAPM */,
+				92AC5E8113A1535700157809 /* SamsAPMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92AC5E5F13A1535700157809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AC5E7013A1535700157809 /* InfoPlist.strings in Resources */,
+				92AC5E7613A1535700157809 /* Credits.rtf in Resources */,
+				92AC5E7C13A1535700157809 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AC5E7F13A1535700157809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92AC5E8013A1535700157809 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92AC5E5D13A1535700157809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AC5E7313A1535700157809 /* main.m in Sources */,
+				92AC5E7913A1535700157809 /* MyAPMAppDelegate.mm in Sources */,
+				927CD50413A1A00600F39B8C /* MyView.mm in Sources */,
+				928A016C1607EA6200738037 /* MyAutomator.cpp in Sources */,
+				925738EF1607EC8D00C355CA /* CppHelper.cpp in Sources */,
+				925738F01607EC8D00C355CA /* DataCollector.cpp in Sources */,
+				925738F11607EC8D00C355CA /* MyAPMSystem.cpp in Sources */,
+				925738F21607EC8D00C355CA /* MyAPMSysAccMut.cpp in Sources */,
+				925738F31607EC8D00C355CA /* MyAPMSysInit.cpp in Sources */,
+				925738F41607EC8D00C355CA /* MyAPMSysModel.cpp in Sources */,
+				925738FC1607EC8D00C355CA /* SquareIndexHelper.cpp in Sources */,
+				923A96491639BC0400DE0982 /* IsCellTypeCalculator.cpp in Sources */,
+				923A964A1639BC0400DE0982 /* MyAPMSysConstructionMethods.cpp in Sources */,
+				923A964B1639BC0400DE0982 /* MyAPMSysTranslationMethods.cpp in Sources */,
+				923A964C1639BC0400DE0982 /* MyStopwatch.cpp in Sources */,
+				923A964D1639BC0400DE0982 /* MySystemCalculator.cpp in Sources */,
+				923A964E1639BC0400DE0982 /* PowerCalculator.cpp in Sources */,
+				923A964F1639BC0400DE0982 /* UpdatePrinter.cpp in Sources */,
+				923A96501639BC0400DE0982 /* VoltageTimesAlphaCalculator.cpp in Sources */,
+				923A96511639BC0400DE0982 /* VoltageTimesAlphaCellTypeCalc.cpp in Sources */,
+				923A96521639BC0400DE0982 /* VoltageTimesAlphaCellTypeLocalCalc.cpp in Sources */,
+				92A8467A1639D63500A93172 /* MyTxtPrinter.cpp in Sources */,
+				92920DB1163F04DF009526F3 /* ExpToVelSampler.cpp in Sources */,
+				92920DB2163F04DF009526F3 /* MyRejectionSampler.cpp in Sources */,
+				92920DB3163F04DF009526F3 /* VelToPowerSampler.cpp in Sources */,
+				92261483166BE63F004D40F0 /* MyCircuitTranslations.cpp in Sources */,
+				92261484166BE63F004D40F0 /* MyCircuitConstructionMethods.cpp in Sources */,
+				92261485166BE63F004D40F0 /* MyCircuitAccMut.cpp in Sources */,
+				92261486166BE63F004D40F0 /* MyCircuit.cpp in Sources */,
+				9226148D166BF8C8004D40F0 /* MyNonConChanSys.cpp in Sources */,
+				9247257B16CFF06F00BBEA31 /* MyAutomatorListGenerator.cpp in Sources */,
+				9247257C16CFF06F00BBEA31 /* MyRegionHelper.cpp in Sources */,
+				9247258016CFF2BC00BBEA31 /* MyProgressPrinter.cpp in Sources */,
+				9201A85417F1D46400A58505 /* FilePathHelpers.cpp in Sources */,
+				924414CD17FA60CA0050E45C /* MyAutomatorHelpers.cpp in Sources */,
+				9213D8F917FA75BB00A8DBFE /* LocalVelToPowerSampler.cpp in Sources */,
+				9213D8FF17FA79A800A8DBFE /* LocalLogVoltageToPowerCalculator.cpp in Sources */,
+				9213D90217FB0ED100A8DBFE /* VoltageCellTypeCalc.cpp in Sources */,
+				922D64D11883A999009BDB18 /* MyAutomatorNewControl.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AC5E7D13A1535700157809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92AC5E8513A1535700157809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92AC5E6013A1535700157809 /* SamsAPM */;
+			targetProxy = 92AC5E8413A1535700157809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92AC5E6E13A1535700157809 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92AC5E6F13A1535700157809 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		92AC5E7413A1535700157809 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92AC5E7513A1535700157809 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		92AC5E7A13A1535700157809 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92AC5E7B13A1535700157809 /* en */,
+			);
+			name = MainMenu.xib;
+			path = SamsBeeSolving;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92AC5E9113A1535700157809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		92AC5E9213A1535700157809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		92AC5E9413A1535700157809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SamsAPM/SamsAPM-Prefix.pch";
+				INFOPLIST_FILE = "SamsAPM/SamsAPM-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "SamOcko.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = SamsAPM;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		92AC5E9513A1535700157809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SamsAPM/SamsAPM-Prefix.pch";
+				INFOPLIST_FILE = "SamsAPM/SamsAPM-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "SamOcko.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = SamsAPM;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		92AC5E9713A1535700157809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SamsBeeSolving.app/Contents/MacOS/SamsBeeSolving";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SamsAPMTests/SamsChannelizationTests-Prefix.pch";
+				INFOPLIST_FILE = "SamsAPMTests/SamsChannelizationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = SamsAPMTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		92AC5E9813A1535700157809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SamsBeeSolving.app/Contents/MacOS/SamsBeeSolving";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SamsAPMTests/SamsChannelizationTests-Prefix.pch";
+				INFOPLIST_FILE = "SamsAPMTests/SamsChannelizationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = SamsAPMTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92AC5E5B13A1535600157809 /* Build configuration list for PBXProject "SamsAPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AC5E9113A1535700157809 /* Debug */,
+				92AC5E9213A1535700157809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AC5E9313A1535700157809 /* Build configuration list for PBXNativeTarget "SamsAPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AC5E9413A1535700157809 /* Debug */,
+				92AC5E9513A1535700157809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AC5E9613A1535700157809 /* Build configuration list for PBXNativeTarget "SamsAPMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AC5E9713A1535700157809 /* Debug */,
+				92AC5E9813A1535700157809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92AC5E5813A1535600157809 /* Project object */;
+}

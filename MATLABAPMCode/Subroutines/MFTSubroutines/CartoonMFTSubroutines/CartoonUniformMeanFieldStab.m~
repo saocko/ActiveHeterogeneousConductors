@@ -1,0 +1,79 @@
+
+function [wall_chan_shade_image] = CartoonUniformMeanFieldStab(mean_density, sys_params, output_path);
+
+wall_chan_shade_image = WhiteShadingArray(sys_params);
+
+%Predicts a phase separation except using the cartoon rather than numerics to find the mean evap and ocnd 
+
+evap_coeff_list = sys_params.evap;
+cond_coeff_list = sys_params.cond;
+fprintf('At CartoonUniformMeanFieldStab! \n');
+
+title_font_size = 14;
+axis_font_size = 12;
+taxis_mode = 2;
+
+%densities = .005:.005:.995;
+%densities = .05:.05:.95;
+%densities = .025:.025:.975;
+
+
+dens_info.values =  .01:.01:.99;
+dens_info.base = mean_density;
+dens_info.pad(1) = 0;
+dens_info.pad(2) = 1;
+[min_val min_ind] = min(abs(dens_info.base - dens_info.values));
+dens_info.base_index = min_ind;
+
+
+
+last_length = 0;
+for cond_ind = 1:length(cond_coeff_list)
+    for evap_ind  = 1:length(evap_coeff_list)
+        
+        
+        cond_coeff = cond_coeff_list(cond_ind);
+        evap_coeff = evap_coeff_list(evap_ind);
+        
+        
+        %Does Channelization
+        mean_evap =  nan(size(dens_info.values));
+        mean_cond = nan(size(dens_info.values));
+        fprintf('Cond coeff is %f, Evap is %f \n', cond_coeff, evap_coeff);
+        for dens_ind = 1:length(dens_info.values)
+            cur_dens = dens_info.values(dens_ind);
+            chan_mean_evap(dens_ind) = CartoonChanMeanEvapRate(cur_dens, 1, evap_coeff, taxis_mode);
+            chan_mean_cond(dens_ind) = CartoonChanMeanCondRate(cur_dens, 1, cond_coeff, taxis_mode);
+
+            wall_mean_evap(dens_ind) = CartoonWallMeanEvapRate(cur_dens, 1,  evap_coeff, taxis_mode);
+            wall_mean_cond(dens_ind) = CartoonWallMeanCondRate(cur_dens, 1, cond_coeff, taxis_mode);
+
+          %  last_length = 0 * updatePrint(sprintf('Doing STab for (evap, cond) = (%.3f, %.3f),  dens %.3f', evap_coeff, cond_coeff, cur_dens), last_length);
+        end
+        
+        
+        
+        
+        
+            chan_plot_title_path =  sprintf('%s/MFTGenPlots/CartoonChanEvapInd%dCondInd%d',output_path, evap_ind, cond_ind);
+            wall_plot_title_path =  sprintf('%s/MFTGenPlots/CartoonWallEvapInd%dCondInd%d',output_path, evap_ind, cond_ind);
+            
+            
+            wall_phase_sep_stab(cond_ind, evap_ind) = UniformPhaseSeparationPlot(dens_info, wall_mean_cond .* 1./wall_mean_evap, wall_plot_title_path);
+            chan_phase_sep_stab(cond_ind, evap_ind) = UniformPhaseSeparationPlot(dens_info, chan_mean_cond .* 1./chan_mean_evap, chan_plot_title_path);
+
+            
+            
+            wall_chan_shade_image(cond_ind, evap_ind, :) = WallChanShadeImage(wall_chan_shade_image(cond_ind, evap_ind, :), ~wall_phase_sep_stab(cond_ind, evap_ind), ~chan_phase_sep_stab(cond_ind, evap_ind));
+            
+            %pause;
+    end
+end
+
+
+
+last_length = 0 * updatePrint('Finished calculating chan stability \n', last_length);
+
+
+
+
